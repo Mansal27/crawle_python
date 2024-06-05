@@ -21,7 +21,7 @@ pattern = r'\b(?:http[s]?://|www\.|[\w\-]+\.[a-z]{2,})(?!.*\.(?:js|css|jpg|jpeg|
 matches = re.findall(pattern, html_content)
 
 # Filtra las URLs que contienen el dominio base de la URL proporcionada
-similar_urls = [url for url in matches if domain_base in url]
+similar_urls = {url for url in matches if domain_base in url}
 
 # Especifica la ruta del archivo
 ruta_archivo = 'crawleado.txt'
