@@ -41,7 +41,7 @@ def crawl(url, pattern, depth, current_depth, domain_base, visited, archivo, hea
             archivo.write(f"{u}\n")
     
     # Introducir un retraso para evitar activar mecanismos de seguridad
-    time.sleep(2)
+    time.sleep(6)
     
     return all_urls
 
